@@ -1,0 +1,36 @@
+<div *ngIf="countries.length === 0; else table"
+  class="alert alert-warning text-center"
+  >
+  No result for this search
+</div>
+
+<ng-template #table>
+  <table class="table table-hover">
+    <thead>
+      <th> # </th>
+      <th> Icono </th>
+      <th> Bandera </th>
+      <th> Nombre </th>
+      <th> Poblacion </th>
+      <th> Maps </th>
+      <th> Escudo Armada </th>
+      <th> link </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries; let i = index" >
+        <td>{{ i + 1 }} </td>
+        <td> {{ country.flag }} </td>
+        <td> <img [src]="country.flags.svg" width="50" [alt]="country.flags.alt"> </td>
+        <td> {{ country.capital }} </td>
+        <td> {{ country.population }} </td>
+        <td> <a [href]="country.maps.googleMaps" target="_blank">{{ country.capital }}</a></td>
+        <td> <img [src]="country.coatOfArms.svg || country.flags.svg" width="50" [alt]="country.capital"> </td>
+        <td> <a href="#">Ver mas...</a> </td>
+
+
+
+      </tr>
+    </tbody>
+
+  </table>
+</ng-template>
