@@ -11,24 +11,19 @@
       <th> Icono </th>
       <th> Bandera </th>
       <th> Nombre </th>
+      <th> Capital </th>
       <th> Poblacion </th>
-      <th> Maps </th>
-      <th> Escudo Armada </th>
-      <th> link </th>
+      <th>  </th>
     </thead>
     <tbody>
       <tr *ngFor="let country of countries; let i = index" >
         <td>{{ i + 1 }} </td>
-        <td> {{ country.flag }} </td>
+        <td> {{ country.fifa }} </td>
         <td> <img [src]="country.flags.svg" width="50" [alt]="country.flags.alt"> </td>
+        <td> {{ country.name.common }} </td>
         <td> {{ country.capital }} </td>
-        <td> {{ country.population }} </td>
-        <td> <a [href]="country.maps.googleMaps" target="_blank">{{ country.capital }}</a></td>
-        <td> <img [src]="country.coatOfArms.svg || country.flags.svg" width="50" [alt]="country.capital"> </td>
-        <td> <a href="#">Ver mas...</a> </td>
-
-
-
+        <td> {{ country.population | number }} </td>
+        <td> <a [routerLink]="[ '/countries/by', country.cca3 ]"  class="btn btn-primary stretched-link">Info</a> </td>
       </tr>
     </tbody>
 
