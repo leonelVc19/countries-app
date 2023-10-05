@@ -27,7 +27,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'by-capital'
   }
-]
+];
 
 @NgModule({
   imports: [
@@ -37,4 +37,4 @@ const routes: Routes = [
     RouterModule
   ],
 })
-export class CountriesRoutingModule { }
+export class CountriesRoutingModule { };

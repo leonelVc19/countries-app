@@ -18,14 +18,13 @@
     <tbody>
       <tr *ngFor="let country of countries; let i = index" >
         <td>{{ i + 1 }} </td>
-        <td> {{ country.fifa }} </td>
+        <td> {{ country.fifa || 'NO ICON'}} </td>
         <td> <img [src]="country.flags.svg" width="50" [alt]="country.flags.alt"> </td>
         <td> {{ country.name.common }} </td>
         <td> {{ country.capital }} </td>
         <td> {{ country.population | number }} </td>
-        <td> <a [routerLink]="[ '/countries/by', country.cca3 ]"  class="btn btn-primary stretched-link">Info</a> </td>
+        <td> <a [routerLink]="[ '/countries/by', country.cca3 ]"  class="btn btn-primary">Info</a> </td>
       </tr>
     </tbody>
-
   </table>
 </ng-template>

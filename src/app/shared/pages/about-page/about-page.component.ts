@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'shared-about-page',
   templateUrl: './about-page.component.html',
 })
-export class AboutPageComponent {
-
-}
+export class AboutPageComponent {};

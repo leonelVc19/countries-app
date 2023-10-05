@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'shared-contact-page',
   templateUrl: './contact-page.component.html'
 })
-export class ContactPageComponent {
-
-}
+export class ContactPageComponent {};
